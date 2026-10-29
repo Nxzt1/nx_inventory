@@ -1,0 +1,2 @@
+# GitHub no cuenta dist/ en los lenguajes por ser una carpeta de compilados; aquí es el recurso.
+dist/** linguist-vendored=false linguist-generated=false

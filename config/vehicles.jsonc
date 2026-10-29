@@ -1,0 +1,204 @@
+// Maleteros y guanteras por clase de vehículo y por modelo
+// Sacado de data/*.lua de ox_inventory.
+// Se puede editar a mano: admite comentarios y comas finales.
+{
+  "storage": {
+    "jester": 3,
+    "adder": 3,
+    "osiris": 1,
+    "pfister811": 1,
+    "penetrator": 1,
+    "autarch": 1,
+    "bullet": 1,
+    "cheetah": 1,
+    "cyclone": 1,
+    "voltic": 1,
+    "reaper": 3,
+    "entityxf": 1,
+    "t20": 1,
+    "taipan": 1,
+    "tezeract": 1,
+    "torero": 3,
+    "turismor": 1,
+    "fmj": 1,
+    "infernus": 1,
+    "italigtb": 3,
+    "italigtb2": 3,
+    "nero2": 1,
+    "vacca": 3,
+    "vagner": 1,
+    "visione": 1,
+    "prototipo": 1,
+    "zentorno": 1,
+    "trophytruck": 0,
+    "trophytruck2": 0
+  },
+  "glovebox": {
+    "byClass": {
+      "0": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "1": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "2": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "3": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "4": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "5": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "6": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "7": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "8": {
+        "slots": 5,
+        "maxWeight": 40000
+      },
+      "9": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "10": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "11": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "12": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "14": {
+        "slots": 31,
+        "maxWeight": 248000
+      },
+      "15": {
+        "slots": 31,
+        "maxWeight": 248000
+      },
+      "16": {
+        "slots": 51,
+        "maxWeight": 408000
+      },
+      "17": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "18": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "19": {
+        "slots": 11,
+        "maxWeight": 88000
+      },
+      "20": {
+        "slots": 11,
+        "maxWeight": 88000
+      }
+    },
+    "models": {
+      "xa21": {
+        "slots": 11,
+        "maxWeight": 88000
+      }
+    }
+  },
+  "trunk": {
+    "byClass": {
+      "0": {
+        "slots": 21,
+        "maxWeight": 168000
+      },
+      "1": {
+        "slots": 41,
+        "maxWeight": 328000
+      },
+      "2": {
+        "slots": 51,
+        "maxWeight": 408000
+      },
+      "3": {
+        "slots": 31,
+        "maxWeight": 248000
+      },
+      "4": {
+        "slots": 41,
+        "maxWeight": 328000
+      },
+      "5": {
+        "slots": 31,
+        "maxWeight": 248000
+      },
+      "6": {
+        "slots": 31,
+        "maxWeight": 248000
+      },
+      "7": {
+        "slots": 21,
+        "maxWeight": 168000
+      },
+      "8": {
+        "slots": 5,
+        "maxWeight": 40000
+      },
+      "9": {
+        "slots": 51,
+        "maxWeight": 408000
+      },
+      "10": {
+        "slots": 51,
+        "maxWeight": 408000
+      },
+      "11": {
+        "slots": 41,
+        "maxWeight": 328000
+      },
+      "12": {
+        "slots": 61,
+        "maxWeight": 488000
+      },
+      "17": {
+        "slots": 41,
+        "maxWeight": 328000
+      },
+      "18": {
+        "slots": 41,
+        "maxWeight": 328000
+      },
+      "19": {
+        "slots": 41,
+        "maxWeight": 328000
+      },
+      "20": {
+        "slots": 61,
+        "maxWeight": 488000
+      }
+    },
+    "models": {
+      "xa21": {
+        "slots": 11,
+        "maxWeight": 10000
+      }
+    }
+  }
+}

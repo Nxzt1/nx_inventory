@@ -1,0 +1,27 @@
+// Animaciones y props con nombre, para usar en items.jsonc
+// Sacado de data/*.lua de ox_inventory.
+// Se puede editar a mano: admite comentarios y comas finales.
+{
+  "anim": {
+    "eating": {
+      "dict": "mp_player_inteat@burger",
+      "clip": "mp_player_int_eat_burger_fp"
+    }
+  },
+  "prop": {
+    "burger": {
+      "model": "prop_cs_burger_01",
+      "bone": 60309,
+      "pos": [
+        0.02,
+        0.02,
+        -0.02
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

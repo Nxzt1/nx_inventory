@@ -1,0 +1,96 @@
+// Ajustes generales de nx_inventory. Admite comentarios y comas finales.
+// Valores iniciales copiados de las convars inventory:* de ox.cfg.
+// Lo leen el servidor y el cliente: no pongas aquí nada secreto.
+{
+  // inventario de cada personaje
+  "playerSlots": 50,
+  "playerMaxWeight": 85000,
+
+  // grupos que cuentan como policía (convar inventory:police): registran sin manos arriba
+  "policeGroups": ["police", "bcso", "sasp"],
+
+  // permiso para registrar, cargar, rehén y meter en el coche (menú personal y recursos que usan el export isAuthorized):
+  // la policía de arriba, estos grupos y, con authorizeGangs, cualquier banda u organización
+  "authorizedGroups": [],
+  "authorizeGangs": true,
+
+  // metros para usar un alijo con coordenadas, y margen por la latencia
+  "stashDistance": 3.0,
+  "distanceTolerance": 2.0,
+
+  // metros máximos para dar un objeto y para registrar a otro jugador
+  "giveDistance": 3.0,
+  "searchDistance": 2.5,
+
+  // objetos tirados al suelo: casillas, peso, a qué distancia se juntan y el modelo
+  "dropSlots": 50,
+  "dropMaxWeight": 30000,
+  "dropMergeDistance": 1.5,
+  "dropModel": "prop_med_bag_01b",
+
+  // segundos entre guardados por lotes (también se guarda al salir cada jugador
+  // y al parar el recurso); un fallo del servidor pierde como mucho esto
+  "saveInterval": 60,
+
+  // minutos sin uso tras los que un alijo o maletero sin cambios se descarga de memoria
+  "stashIdleMinutes": 10,
+
+  // ms para agrupar la copia del inventario a qbx_core tras varios cambios
+  "frameworkSyncDelay": 250,
+
+  // matrículas sin espacios (inventory:trimplate)
+  "trimPlate": true,
+
+  // botín de maleteros y guanteras de coches sin dueño: [objeto, mínimo, máximo, probabilidad %]
+  "vehicleLoot": [
+    ["cola", 1, 1],
+    ["water", 1, 1],
+    ["garbage", 1, 2, 50],
+    ["panties", 1, 1, 5],
+    ["money", 1, 50],
+    ["money", 200, 400, 5],
+    ["bandage", 1, 1],
+  ],
+
+  // teclas por defecto (cada jugador las cambia en Ajustes > Teclas de FiveM)
+  "keys": { "inventory": "TAB", "secondary": "K", "hotbar": "F1", "reload": "R" },
+  "hotbarSlots": 5,
+
+  // controles que siguen funcionando con el inventario abierto (249 = pulsar para hablar)
+  "enableControls": [249],
+
+  // armas: animación al sacarlas, aviso al equipar/guardar, disparar solo apuntando, recarga sola
+  "weaponAnims": true,
+  "weaponNotify": true,
+  "aimedFiring": false,
+  "autoReload": false,
+
+  // avisos "+3 Agua" al recibir o perder objetos con el inventario cerrado
+  "itemNotify": true,
+
+  // imágenes para la NUI y para otros recursos
+  "imagePath": "nui://nx_inventory/web/images",
+  "imageExt": "webp",
+
+  // "error" | "warn" | "info"
+  "logLevel": "info",
+
+  // Otros recursos (opcionales). Vacío = no se usa.
+  "integrations": {
+    // recurso con export show({ description, type }) para los avisos (vacío: avisos de GTA)
+    "notify": "",
+    // recurso con exports show({ label, duration, resource }) y hide(cancelado) para la barra de uso
+    "progress": "",
+    // eventos locales del cliente para el [E] cuando no hay ox_target (show recibe { text })
+    "textUiShow": "",
+    "textUiHide": "",
+    // recurso de policía con eventos de cliente para meter y sacar del coche (reciben netId y asiento)
+    "escortResource": "",
+    "escortWarpEvent": "",
+    "escortRemoveEvent": "",
+    // statebags del jugador que cuentan como esposado o inconsciente
+    "restrainedStates": ["isHandcuffed", "handcuffed", "isDead", "isLaststand"],
+    // evento local para lanzar acciones del menú personal desde otros recursos
+    "personalActionEvent": "nx_inventory:personalAction"
+  },
+}

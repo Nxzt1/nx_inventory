@@ -1,0 +1,242 @@
+// Menú personal: ropa y acciones (lista blanca)
+// Sacado de data/*.lua de ox_inventory.
+// Se puede editar a mano: admite comentarios y comas finales.
+{
+  "models": {
+    "mp_m_freemode_01": 1,
+    "mp_f_freemode_01": 2
+  },
+  "clothing": [
+    {
+      "id": "mask",
+      "label": "Mask",
+      "name": "a mask",
+      "icon": "mask",
+      "component": 1,
+      "off": [
+        0,
+        0
+      ],
+      "anim": [
+        "mp_masks@standard_car@ds@",
+        "put_on_mask",
+        800
+      ]
+    },
+    {
+      "id": "hat",
+      "label": "Hat",
+      "name": "a hat",
+      "icon": "hat",
+      "prop": 0,
+      "anim": [
+        "mp_masks@standard_car@ds@",
+        "put_on_mask",
+        600
+      ]
+    },
+    {
+      "id": "glasses",
+      "label": "Glasses",
+      "name": "glasses",
+      "icon": "glasses",
+      "prop": 1,
+      "anim": [
+        "clothingspecs",
+        "take_off",
+        1400
+      ]
+    },
+    {
+      "id": "neck",
+      "label": "Necklace",
+      "name": "a necklace",
+      "icon": "neck",
+      "component": 7,
+      "off": [
+        0,
+        0
+      ],
+      "anim": [
+        "clothingtie",
+        "try_tie_positive_a",
+        2100
+      ]
+    },
+    {
+      "id": "top",
+      "label": "Jacket",
+      "name": "a jacket",
+      "icon": "top",
+      "component": 11,
+      "off": [
+        15,
+        15
+      ],
+      "anim": [
+        "clothingshirt",
+        "try_shirt_positive_d",
+        1200
+      ]
+    },
+    {
+      "id": "vest",
+      "label": "Vest",
+      "name": "a vest",
+      "icon": "vest",
+      "component": 9,
+      "off": [
+        0,
+        0
+      ],
+      "anim": [
+        "clothingshirt",
+        "try_shirt_positive_d",
+        1200
+      ]
+    },
+    {
+      "id": "torso",
+      "label": "Shirt",
+      "name": "a shirt",
+      "icon": "torso",
+      "component": 8,
+      "off": [
+        15,
+        14
+      ],
+      "anim": [
+        "clothingshirt",
+        "try_shirt_positive_d",
+        1200
+      ]
+    },
+    {
+      "id": "backpack",
+      "label": "Bag",
+      "name": "a bag",
+      "icon": "backpack",
+      "component": 5,
+      "off": [
+        0,
+        0
+      ],
+      "anim": [
+        "anim@heists@ornate_bank@grab_cash",
+        "intro",
+        1600
+      ]
+    },
+    {
+      "id": "watch",
+      "label": "Watch",
+      "name": "a watch",
+      "icon": "watch",
+      "prop": 6,
+      "anim": [
+        "nmt_3_rcm-10",
+        "cs_nigel_dual-10",
+        1200
+      ]
+    },
+    {
+      "id": "gloves",
+      "label": "Gloves",
+      "name": "gloves",
+      "icon": "gloves",
+      "component": 3,
+      "off": [
+        15,
+        15
+      ],
+      "anim": [
+        "nmt_3_rcm-10",
+        "cs_nigel_dual-10",
+        1200
+      ]
+    },
+    {
+      "id": "pants",
+      "label": "Pants",
+      "name": "pants",
+      "icon": "pants",
+      "component": 4,
+      "off": [
+        61,
+        14
+      ],
+      "anim": [
+        "re@construction",
+        "out_of_breath",
+        1300
+      ]
+    },
+    {
+      "id": "shoes",
+      "label": "Shoes",
+      "name": "shoes",
+      "icon": "shoes",
+      "component": 6,
+      "off": [
+        34,
+        35
+      ],
+      "anim": [
+        "random@domestic",
+        "pickup_low",
+        1200
+      ]
+    },
+    {
+      "id": "hair",
+      "label": "Hair",
+      "name": "hair",
+      "icon": "hair",
+      "component": 2,
+      "off": [
+        0,
+        0
+      ],
+      "anim": [
+        "clothingtie",
+        "check_out_a",
+        2000
+      ],
+      "none": "You have no hair to tie up",
+      "hidden": true
+    }
+  ],
+  // "authorized": true = solo policía y organizaciones (config.jsonc → authorizedGroups / authorizeGangs).
+  // Acciones de otros recursos: { "id", "label", "icon", "event": "recurso:evento" } o "command",
+  // por ejemplo cargar a hombros o coger de rehén con tu recurso de animaciones.
+  "actions": [
+    {
+      "id": "hair",
+      "label": "Toggle hair",
+      "icon": "hair",
+      "clothing": "hair"
+    },
+    {
+      "id": "search",
+      "label": "Search",
+      "icon": "search",
+      "builtin": "search",
+      "authorized": true
+    },
+    {
+      "id": "vehicle",
+      "label": "Put in vehicle",
+      "icon": "car",
+      "builtin": "vehicle",
+      "authorized": true
+    }
+  ],
+  "search": {
+    "distance": 2
+  },
+  "animTimeout": 1500,
+  "resetEvents": [
+    "QBCore:Client:OnPlayerUnload"
+  ],
+  "command": "menupersonal"
+}
